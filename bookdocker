@@ -19,6 +19,7 @@ fi
 cat > /tmp/Dockerfile <<HERE
 FROM ruby:2.3
 
+ADD *.gemspec /tmp/
 ADD Gemfile* /tmp/
 WORKDIR /tmp
 RUN bundle install
